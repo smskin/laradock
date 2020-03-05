@@ -15,5 +15,5 @@
 /.devcontainer/*
 !/.devcontainer/devcontainer.example.json
 !/.devcontainer/docker-compose.extend-example.yml
-
+.env
 .DS_Store
