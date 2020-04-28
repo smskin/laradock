@@ -1,7 +1,10 @@
 {
-	"authHost": "localhost",
+	"authHost": "http://api.qgo.dtk",
 	"authEndpoint": "/broadcasting/auth",
-	"clients": [],
+	"clients": [{
+		"appId": "58ca5ee09abf3ec0",
+		"key": "549293fd0f4e43d57fe403caef8454fc"
+	}],
 	"database": "redis",
 	"databaseConfig": {
 		"redis": {
@@ -15,5 +18,15 @@
 	"protocol": "http",
 	"socketio": {},
 	"sslCertPath": "",
-	"sslKeyPath": ""
+	"sslKeyPath": "",
+	"apiOriginAllow": {
+		"allowCors" : true,
+		"allowOrigin" : "http://api.qgo.dtk:3020",
+		"allowMethods" : "GET, POST",
+		"allowHeaders" : "Origin, Content-Type, X-Auth-Token, X-Requested-With, Accept, Authorization, X-CSRF-TOKEN, X-Socket-Id"
+	},
+	"subscribers": {
+		"http": true,
+		"redis": true
+	}
 }
