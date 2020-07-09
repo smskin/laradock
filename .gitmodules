@@ -1,0 +1,3 @@
+[submodule "cryptopro"]
+	path = cryptopro
+	url = https://github.com/smskin/docker-cryptopro.git
