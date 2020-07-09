@@ -1678,5 +1678,7 @@ services:
           - PRIVATE_KEY_FOLDER_NAME=${CRYPTOPRO_PRIVATE_KEY_FOLDER_NAME}
       expose:
         - 80
+      networks:
+        - backend
       ports:
         - ${CRYPTOPRO_HOST_HTTP_PORT}:80
