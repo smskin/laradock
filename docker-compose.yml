@@ -1666,4 +1666,17 @@ services:
         - ${DATA_PATH_HOST}/tomcat/webapps:/usr/local/tomcat/webapps
         - ${DATA_PATH_HOST}/tomcat/logs:/usr/local/tomcat/logs
       # restart: always
-
+    cryptopro:
+      build:
+        context: ./cryptopro
+        args:
+          - CRYPTOPRO_DEB_SOURCE=${CRYPTOPRO_DEB_SOURCE}
+          - CADES_DEB_SOURCE=${CRYPTOPRO_CADES_DEB_SOURCE}
+          - CRYPTOPRO_LOGIN=${CRYPTOPRO_LOGIN}
+          - CRYPTOPRO_PASSWORD=${CRYPTOPRO_PASSWORD}
+          - PUBLIC_KEY_FILE_NAME=${CRYPTOPRO_PUBLIC_KEY_FILE_NAME}
+          - PRIVATE_KEY_FOLDER_NAME=${CRYPTOPRO_PRIVATE_KEY_FOLDER_NAME}
+      expose:
+        - 80
+      ports:
+        - ${CRYPTOPRO_HOST_HTTP_PORT}:80
