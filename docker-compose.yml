@@ -1680,3 +1680,5 @@ services:
         - 80
       ports:
         - ${CRYPTOPRO_HOST_HTTP_PORT}:80
+      networks:
+        - backend
