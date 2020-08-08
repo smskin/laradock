@@ -848,3 +848,7 @@ GEARMAN_MYSQL_PASSWORD_FILE=
 GEARMAN_MYSQL_DB=Gearmand
 # Table to use by Gearman (Default: gearman_queue)
 GEARMAN_MYSQL_TABLE=gearman_queue
+
+### CRYPTOPRO ##################################################
+PUBLIC_KEY_FILE_NAME=test-certificate.cer
+PRIVATE_KEY_FOLDER_NAME=test-sig.000
